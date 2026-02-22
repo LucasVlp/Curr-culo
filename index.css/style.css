@@ -1,0 +1,198 @@
+:root {
+  --primary: #0f172a;
+  --secondary: #475569;
+  --accent: #2563eb;
+  --accent-light: #3b82f6;
+  --background: #f1f5f9;
+  --white: #ffffff;
+  --border: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 0;
+}
+
+/* ===== HERO ===== */
+
+header {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: var(--white);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.profile-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 25px;
+}
+
+/* ===== BOTÃO ===== */
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+/* ===== SEÇÕES ===== */
+
+section {
+  margin-bottom: 70px;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.about p {
+  max-width: 800px;
+  color: var(--secondary);
+}
+
+/* ===== SKILLS ===== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.skill-box {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.skill-box h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.skill-box p {
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+/* ===== EXPERIÊNCIA ===== */
+
+.experience-item {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.experience-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.experience-item span {
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.experience-item ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.experience-item li {
+  margin-bottom: 6px;
+  color: var(--secondary);
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+  }
+}
